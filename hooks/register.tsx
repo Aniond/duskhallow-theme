@@ -9,7 +9,7 @@ const { theme, problems } = makeColors(PALETTE)
 const LOOK: ThemeSetArgs = {
   colors: theme,
   // No tint: the frosted panels take the theme's own colour, so text stays readable in either mode.
-  backdrop: { scene: 'duskhallow-night', glass: { blur: 14, opacity: 0.66 } },
+  backdrop: { scene: 'duskhallow-night', glass: { blur: 4, opacity: 0.45 } },
 }
 
 export const register: Register = on => {

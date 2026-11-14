@@ -113,7 +113,7 @@ svg{--sil:#07050c;--far:#1b132b;--snow:#2f2545;--mid:#110b1c;--fogc:#8a78b0;--fo
 .blink{animation:blink 3.4s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:0}20%,55%{opacity:1}75%{opacity:.15}}
 .ffcore{fill:#fbffd6;opacity:.9}
-@media (max-aspect-ratio:1/1){.moon{transform:translate(-470px,30px)}.left{transform:translate(430px,0) scale(.85);transform-origin:0 1000px}.right{transform:translate(-430px,0) scale(.85);transform-origin:1600px 1000px}}
+@media (max-aspect-ratio:1/1){.moon{transform:translate(-240px,30px)}.left{transform:translate(120px,0) scale(.85);transform-origin:0 1000px}.right{transform:translate(-120px,0) scale(.85);transform-origin:1600px 1000px}}
 @media (min-aspect-ratio:2/1){.moon{transform:translate(0,190px)}}
 @media (prefers-color-scheme:light){
 svg{--sil:#2a2136;--far:#7a6e91;--snow:#a59bb8;--mid:#4e4363;--fogc:#ffffff;--fogo:.32;--win:#ffc25e}
@@ -125,11 +125,12 @@ svg{--sil:#2a2136;--far:#7a6e91;--snow:#a59bb8;--mid:#4e4363;--fogc:#ffffff;--fo
 </style>
 <rect width="1600" height="1000" fill="url(#sky)"/>
 <g>${stars}</g>
-<g class="moon">
+<g transform="translate(-230,50)"><g class="moon">
 <circle class="halo" cx="1290" cy="200" r="250" fill="url(#halo)"/>
 <circle cx="1290" cy="200" r="82" fill="url(#moonB)"/>
 <g fill="#cbb98f" opacity=".45"><circle cx="1262" cy="178" r="15"/><circle cx="1312" cy="226" r="11"/><circle cx="1318" cy="170" r="7"/><circle cx="1270" cy="236" r="6"/><circle cx="1296" cy="196" r="4"/></g>
 <g class="bloodmoon"><circle cx="1290" cy="200" r="230" fill="url(#bloodHalo)"/><circle cx="1290" cy="200" r="82" fill="url(#blood)"/><g fill="#5a0c18" opacity=".35"><circle cx="1262" cy="178" r="15"/><circle cx="1312" cy="226" r="11"/><circle cx="1318" cy="170" r="7"/></g></g>
+</g>
 </g>
 <g class="cloud"><ellipse cx="1100" cy="210" rx="190" ry="20" fill="#2a1f3c" opacity=".75" filter="url(#soft)"/><ellipse cx="1180" cy="196" rx="110" ry="14" fill="#352a4a" opacity=".6" filter="url(#soft)"/></g>
 <g class="cloud2"><ellipse cx="700" cy="120" rx="240" ry="16" fill="#241a35" opacity=".6" filter="url(#soft)"/></g>
@@ -139,7 +140,7 @@ svg{--sil:#2a2136;--far:#7a6e91;--snow:#a59bb8;--mid:#4e4363;--fogc:#ffffff;--fo
 <path class="mid" d="M0 760Q160 690 330 730T690 720T1030 740T1360 700T1600 730V1000H0Z"/>
 <path class="sil" d="M0 1000V962Q400 948 800 958T1600 955V1000Z"/>
 <g class="fogA"><ellipse class="fogband" cx="500" cy="770" rx="560" ry="46"/><ellipse class="fogband" cx="1250" cy="760" rx="480" ry="40"/></g>
-<g class="left">
+<g transform="translate(330,0)"><g class="left">
 <path class="sil" d="M-20 1000V640L-6 660L4 600L14 640L30 610L40 655L50 1000Z"/>
 <path class="sil" d="M60 940C70 860 56 800 80 740C66 720 40 712 28 690C50 700 70 712 86 726C92 690 84 660 98 630C104 664 104 700 100 730C120 712 140 704 162 708C140 716 118 730 106 752C96 820 112 880 106 940Z"/>
 <path class="sil" d="M150 940V820L190 780L230 820V940ZM180 820V700L196 640L212 700V820Z"/>
@@ -156,7 +157,8 @@ ${graves}
 <path class="sil" d="M0 1000V930Q200 910 400 935T640 950V1000Z"/>
 <g class="ghost"><g class="bob"><path d="M470 860c-14 0-22 12-22 26v32l7-6l7 7l8-7l8 7l7-7l7 6v-32c0-14-8-26-22-26z" fill="url(#ghostG)"/><circle cx="464" cy="884" r="2.2" fill="#1a1426"/><circle cx="476" cy="884" r="2.2" fill="#1a1426"/></g></g>
 </g>
-<g class="right">
+</g>
+<g transform="translate(-260,0)"><g class="right">
 <circle class="glow" cx="1520" cy="930" r="110" fill="url(#well)"/>
 <g class="sil"><path d="M1462 950l4-40h12l3 40z"/><path d="M1500 945l3-52h13l4 52z"/><path d="M1546 948l3-44h12l3 44z"/><path d="M1584 952l3-36h11l3 36z"/></g>
 <g><rect class="rune" x="1469" y="922" width="4" height="9" rx="1"/><rect class="rune" x="1508" y="910" width="4" height="10" rx="1" style="animation-delay:-2s"/><rect class="rune" x="1553" y="918" width="4" height="9" rx="1" style="animation-delay:-4s"/></g>
@@ -170,6 +172,7 @@ ${graves}
 <g><ellipse cx="1150" cy="944" rx="20" ry="15" fill="#c8641c"/><path d="M1150 930v-8" stroke="#2c3a16" stroke-width="3"/><path class="win flick" d="M1141 940l4-5l4 5zM1151 940l4-5l4 5zM1140 948q10 6 20 0l-4 4h-12z"/><circle class="glow" cx="1150" cy="944" r="40" fill="url(#lamp)" opacity=".5"/></g>
 <g><ellipse cx="1102" cy="956" rx="13" ry="10" fill="#a14f17"/><ellipse cx="1190" cy="958" rx="11" ry="8" fill="#a14f17"/></g>
 <path class="sil" d="M1000 1000V958Q1200 935 1400 955T1600 948V1000Z"/>
+</g>
 </g>
 <g class="fogB"><ellipse class="fogband" cx="300" cy="960" rx="520" ry="50"/><ellipse class="fogband" cx="1350" cy="975" rx="560" ry="46"/></g>
 <g>${fireflies}</g>
