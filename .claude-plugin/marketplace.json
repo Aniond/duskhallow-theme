@@ -1,0 +1,5 @@
+{
+  "name": "duskhallow-theme",
+  "owner": { "name": "Aniond" },
+  "plugins": [{ "name": "duskhallow-theme", "source": "./" }]
+}
